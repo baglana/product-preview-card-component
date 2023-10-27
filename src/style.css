@@ -1,15 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
 
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  background: var(--cream-bg, #F2EAE2);
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+main {
+  display: flex;
+  padding: 28px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .card {
+  border-radius: 10px;
+  background: var(--Pure-White, #FFF);
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+.card__product-image {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .card__product-title>h2,
@@ -47,6 +72,7 @@ body {
 }
 
 .card__add-to-cart-button {
+  border-radius: 8px;
   font-size: 0.875rem;
   font-weight: 700;
 }
