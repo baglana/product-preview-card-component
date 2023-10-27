@@ -10,6 +10,10 @@ html {
   box-sizing: inherit;
 }
 
+p, h2 {
+  margin: 0;
+}
+
 body {
   background: var(--cream-bg, #F2EAE2);
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -37,6 +41,10 @@ main {
   border-radius: 10px 10px 0px 0px;
 }
 
+.card__product-info {
+  padding: 19px 24px 23px;
+}
+
 .card__product-title>h2,
 .card__product-price {
   font-family: 'Fraunces', serif;
@@ -51,13 +59,22 @@ main {
 }
 
 .card__product-title>h2 {
+  margin-top: 13px;
+  margin-bottom: 16px;
   font-size: 2rem;
   line-height: 2rem; /* 100% */
 }
 
 .card__product-description {
+  margin-bottom: 24px;
   font-size: 0.875rem;
   line-height: 1.4375rem; /* 164.286% */
+}
+
+.card__product-price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 19px;
 }
 
 .card__product-price {
@@ -72,6 +89,11 @@ main {
 }
 
 .card__add-to-cart-button {
+  display: block;
+  width: 295px;
+  height: 48px;
+  margin-top: 20px;
+  border-style: none;
   border-radius: 8px;
   font-size: 0.875rem;
   font-weight: 700;
