@@ -5,13 +5,48 @@ body {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.product-card {
+.card {
   font-family: 'Montserrat', sans-serif;
+  font-style: normal;
   font-weight: 500;
+  line-height: normal;
 }
 
-.product-card-title>h2,
-.product-card-price {
+.card__product-title>h2,
+.card__product-price {
   font-family: 'Fraunces', serif;
+  font-weight: 700;
+}
+
+.card__product-title>p {
+  font-size: 0.75rem;
+  line-height: normal;
+  letter-spacing: 0.3125rem;
+  text-transform: uppercase;
+}
+
+.card__product-title>h2 {
+  font-size: 2rem;
+  line-height: 2rem; /* 100% */
+}
+
+.card__product-description {
+  font-size: 0.875rem;
+  line-height: 1.4375rem; /* 164.286% */
+}
+
+.card__product-price {
+  font-size: 2rem;
+  line-height: 2rem; /* 100% */
+}
+
+.card__product-price-old {
+  font-size: 0.8125rem;
+  line-height: 1.4375rem; /* 176.923% */
+  text-decoration-line: line-through;
+}
+
+.card__add-to-cart-button {
+  font-size: 0.875rem;
   font-weight: 700;
 }
