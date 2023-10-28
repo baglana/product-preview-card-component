@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
 
-html {
+:root {
+  /* primary colors */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --dark-cyan-hover: hsl(157, 43%, 18%);
+  --cream: hsl(30, 38%, 92%);
+
+  /* neutral colors */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
   box-sizing: border-box;
 }
 *,
@@ -15,7 +25,7 @@ p, h2 {
 }
 
 body {
-  background: var(--cream-bg, #F2EAE2);
+  background: var(--cream, #F2EAE2);
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
@@ -29,7 +39,7 @@ main {
 
 .card {
   border-radius: 10px;
-  background: var(--Pure-White, #FFF);
+  background: var(--white, #FFF);
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -41,32 +51,35 @@ main {
   border-radius: 10px 10px 0px 0px;
 }
 
-.card__product-info {
+.card__body {
   padding: 19px 24px 23px;
 }
 
-.card__product-title>h2,
+.card__product-title > h2,
 .card__product-price {
   font-family: 'Fraunces', serif;
   font-weight: 700;
 }
 
-.card__product-title>p {
+.card__product-title > p {
+  color: var(--dark-grayish-blue, #6C7289);
   font-size: 0.75rem;
   line-height: normal;
   letter-spacing: 0.3125rem;
   text-transform: uppercase;
 }
 
-.card__product-title>h2 {
+.card__product-title > h2 {
   margin-top: 13px;
   margin-bottom: 16px;
+  color: var(--very-dark-blue, #1C232B);
   font-size: 2rem;
   line-height: 2rem; /* 100% */
 }
 
 .card__product-description {
   margin-bottom: 24px;
+  color: var(--dark-grayish-blue, #6C7289);
   font-size: 0.875rem;
   line-height: 1.4375rem; /* 164.286% */
 }
@@ -78,11 +91,13 @@ main {
 }
 
 .card__product-price {
+  color: var(--dark-cyan, #3D8168);
   font-size: 2rem;
   line-height: 2rem; /* 100% */
 }
 
 .card__product-price-old {
+  color: var(--dark-grayish-blue, #6C7289);
   font-size: 0.8125rem;
   line-height: 1.4375rem; /* 176.923% */
   text-decoration-line: line-through;
@@ -98,12 +113,14 @@ main {
   margin-top: 20px;
   border-style: none;
   border-radius: 8px;
+  background-color: var(--dark-cyan, #3D8168);;
+  color: var(--white, #FFF);
   font-size: 0.875rem;
   font-weight: 700;
 }
 
 .card__add-to-cart-button:hover {
-  background: var(--deep-aquamarine-hover, #1A4032);
+  background: var(--dark-cyan-hover, #1A4032);
 }
 
 .icon-cart {
