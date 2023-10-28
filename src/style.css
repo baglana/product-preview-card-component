@@ -123,9 +123,6 @@ main {
   background: var(--dark-cyan-hover, #1A4032);
 }
 
-.icon-cart {
-  display: inline-block;
-  width: 14.385px;
-  height: 16px;
-  background-image: url(../images/icon-cart.svg);
+.card__add-to-cart-button::before {
+  content: url(../images/icon-cart.svg);
 }
