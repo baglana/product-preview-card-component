@@ -102,6 +102,10 @@ main {
   font-weight: 700;
 }
 
+.card__add-to-cart-button:hover {
+  background: var(--deep-aquamarine-hover, #1A4032);
+}
+
 .icon-cart {
   display: inline-block;
   width: 14.385px;
