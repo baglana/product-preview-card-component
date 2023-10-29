@@ -52,7 +52,7 @@ main {
 .card__body {
   display: flex;
   flex-direction: column;
-  padding: 19px 24px 23px;
+  padding: 20px 24px 23px;
 }
 
 .card__product-title > p {
