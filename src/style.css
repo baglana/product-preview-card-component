@@ -27,6 +27,7 @@ p, h2 {
 body {
   background: var(--cream, #F2EAE2);
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
 }
 
 main {
