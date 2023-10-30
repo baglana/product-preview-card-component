@@ -31,10 +31,12 @@ body {
 }
 
 main {
-  padding: 28px 16px;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
+  margin: 28px 16px;
   overflow: auto;
   border-radius: 10px;
   background: var(--white, #FFF);
@@ -53,6 +55,10 @@ main {
   display: flex;
   flex-direction: column;
   padding: 20px 24px 24px;
+
+  /* @media (min-width: 376px) {
+    padding: 32px 31.5px;
+  } */
 }
 
 .card__product-title > p {
@@ -107,7 +113,6 @@ main {
   align-items: center;
   justify-content: center;
   gap: 11.61px;
-  max-width: 295px;
   /* height: 48px; */
   margin-top: 19px;
   border-style: none;
