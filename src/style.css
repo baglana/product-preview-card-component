@@ -37,7 +37,7 @@ main {
 
 .card {
   margin: 28px 16px;
-  overflow: auto;
+  /* overflow: auto; */
   border-radius: 10px;
   background: var(--white, #FFF);
   font-family: 'Montserrat', sans-serif;
@@ -77,6 +77,11 @@ main {
   font-size: 2rem;
   font-weight: 700;
   line-height: 2rem; /* 100% */
+
+  @media (min-width: 600px) {
+    margin-top: 22px;
+    margin-bottom: 24px;  
+  }
 }
 
 .card__product-description {
@@ -84,6 +89,10 @@ main {
   color: var(--dark-grayish-blue, #6C7289);
   font-size: 0.875rem;
   line-height: 1.4375rem; /* 164.286% */
+
+  @media (min-width: 600px) {
+    margin-bottom: 29px;
+  }
 }
 
 .card__product-price-wrapper {
@@ -122,6 +131,10 @@ main {
   color: var(--white, #FFF);
   font-size: 0.875rem;
   font-weight: 700;
+
+  @media (min-width: 600px) {
+    margin-top: 27px;
+  }
 }
 
 .card__add-to-cart-button:hover {
@@ -130,4 +143,21 @@ main {
 
 .card__add-to-cart-button::before {
   content: url(../images/icon-cart.svg);
+}
+
+@media (min-width: 600px) {
+  .card {
+    display: flex;
+    max-width: 600px;
+    /* max-height: 450px; */
+  }
+
+  picture {
+    flex-shrink: 0;
+    max-width: 300px;
+  }
+  
+  .card__product-image {
+    border-radius: 10px 0px 0px 10px;
+  }
 }
