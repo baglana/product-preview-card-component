@@ -25,9 +25,15 @@ p, h2 {
 }
 
 body {
+  margin: 0;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background: var(--cream, #F2EAE2);
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 main {
@@ -36,8 +42,15 @@ main {
 }
 
 .card {
+  overflow: hidden;
+  max-width: 24rem; /* 
+    why this number?
+    is it 31.5px (left padding) + 321px (width) + 31.5px (right padding)
+    = 384px = 24rem at 599px viewport width?
+    does this calculation account for box-sizing: border-box; on line 15?
+    but do i really need it if there is a media query on 600px and layout changes anyway?
+  */
   margin: 28px 16px;
-  /* overflow: auto; */
   border-radius: 10px;
   background: var(--white, #FFF);
   font-family: 'Montserrat', sans-serif;
@@ -48,15 +61,27 @@ main {
 
 .card__product-image {
   max-width: 100%;
-  border-radius: 10px 10px 0px 0px;
+  display: block;
+  /* should i always set display: block for imgs?
+      i notice that without this property the card gets 4 extra px in height
+  */
+  object-fit: cover;
+  
+  @media (min-width: 37.5rem) {
+    /* why is this property below necessary?
+        i didn't notice a difference with or without it
+    */
+    height: 100%;
+  }
 }
 
 .card__body {
   display: flex;
   flex-direction: column;
+  flex: 1 1 50%;
   padding: 20px 24px 24px;
 
-  @media (min-width: 376px) {
+  @media (min-width: 23.5rem) {
     padding: 32px 31.5px;
   }
 }
@@ -78,7 +103,7 @@ main {
   font-weight: 700;
   line-height: 2rem; /* 100% */
 
-  @media (min-width: 600px) {
+  @media (min-width: 37.5rem) {
     margin-top: 22px;
     margin-bottom: 24px;  
   }
@@ -90,7 +115,7 @@ main {
   font-size: 0.875rem;
   line-height: 1.4375rem; /* 164.286% */
 
-  @media (min-width: 600px) {
+  @media (min-width: 37.5rem) {
     margin-bottom: 29px;
   }
 }
@@ -132,7 +157,7 @@ main {
   font-size: 0.875rem;
   font-weight: 700;
 
-  @media (min-width: 600px) {
+  @media (min-width: 37.5rem) {
     margin-top: 27px;
   }
 }
@@ -145,19 +170,20 @@ main {
   content: url(../images/icon-cart.svg);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5rem) {
   .card {
     display: flex;
-    max-width: 600px;
-    /* max-height: 450px; */
+    /* max-width: 600px; */
+    max-width: 40rem;
+    /* why this number?
+      the desktop card in figma design is 37.5rem or 600px
+      but the card's width is 640px now and there are extra 40px in the right half of the card
+    */
   }
 
   picture {
-    flex-shrink: 0;
     max-width: 300px;
-  }
-  
-  .card__product-image {
-    border-radius: 10px 0px 0px 10px;
+    flex: 1 1 50%;
+    /* is there a reason for setting flex-grow as 1 in this particular case? */
   }
 }
