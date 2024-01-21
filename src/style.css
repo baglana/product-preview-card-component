@@ -157,7 +157,7 @@ main {
 }
 
 .card__add-to-cart-button::before {
-  content: url(/public/icon-cart.svg);
+  content: url(../public/icon-cart.svg);
 }
 
 @media (min-width: 37.5rem) {
