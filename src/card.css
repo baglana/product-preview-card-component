@@ -1,0 +1,106 @@
+.card {
+    overflow: hidden;
+    max-width: 24rem; /*
+    why this number?
+    is it 31.5px (left padding) + 321px (width) + 31.5px (right padding)
+    = 384px = 24rem at 599px viewport width?
+    does this calculation account for box-sizing: border-box; on line 15?
+    but do i really need it if there is a media query on 600px and layout changes anyway?
+  */
+    margin: 28px 16px;
+    border-radius: 10px;
+    background: var(--white, #FFF);
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.card__product-image {
+    max-width: 100%;
+    object-fit: cover;
+
+    @media (min-width: 37.5rem) {
+        height: 100%;
+    }
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    padding: 20px 24px 24px;
+
+    @media (min-width: 23.5rem) {
+        padding: 32px 31.5px;
+    }
+}
+
+.card__product-title > p {
+    color: var(--dark-grayish-blue, #6C7289);
+    font-size: 0.75rem;
+    line-height: normal;
+    letter-spacing: 0.3125rem;
+    text-transform: uppercase;
+}
+
+.card__product-title > h2 {
+    margin-top: 12px;
+    color: var(--very-dark-blue, #1C232B);
+    font-family: 'Fraunces', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem; /* 100% */
+
+    @media (min-width: 37.5rem) {
+        margin-top: 20px;
+    }
+}
+
+.card__product-description {
+    margin-top: 16px;
+    color: var(--dark-grayish-blue, #6C7289);
+    font-size: 0.875rem;
+    line-height: 1.4375rem; /* 164.286% */
+
+    @media (min-width: 37.5rem) {
+        margin-top: 24px;
+    }
+}
+
+.card__product-price-wrapper {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    flex-wrap: wrap;
+
+    @media (min-width: 37.5rem) {
+        margin-top: 29px;
+    }
+}
+
+.card__product-price {
+    color: var(--dark-cyan, #3D8168);
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem; /* 100% */
+}
+
+.card__product-price-old {
+    color: var(--dark-grayish-blue, #6C7289);
+    font-size: 0.8125rem;
+    line-height: 1.4375rem; /* 176.923% */
+}
+
+@media (min-width: 37.5rem) {
+    .card {
+        display: flex;
+        max-width: 600px;
+    }
+
+    picture {
+        max-width: 300px;
+    }
+}

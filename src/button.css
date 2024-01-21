@@ -1,0 +1,26 @@
+.card__add-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11.61px;
+    margin-top: 20px;
+    border-style: none;
+    border-radius: 8px;
+    padding: 15px 0px 13px;
+    background-color: var(--dark-cyan, #3D8168);;
+    color: var(--white, #FFF);
+    font-size: 0.875rem;
+    font-weight: 700;
+
+    @media (min-width: 37.5rem) {
+        margin-top: 30px;
+    }
+}
+
+.card__add-to-cart-button:hover {
+    background: var(--dark-cyan-hover, #1A4032);
+}
+
+.card__add-to-cart-button::before {
+    content: url(../public/icon-cart.svg);
+}
