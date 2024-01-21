@@ -19,8 +19,9 @@
 
 .card__add-to-cart-button:hover {
     background: var(--dark-cyan-hover, #1A4032);
+    cursor: pointer;
 }
 
 .card__add-to-cart-button::before {
-    content: url(../public/icon-cart.svg);
+    content: url(/icon-cart.svg);
 }
