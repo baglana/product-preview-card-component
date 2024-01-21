@@ -1,5 +1,5 @@
 {
-  "name": "fm-product-preview-card-component",
+  "name": "product-preview-card-component",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,12 +11,12 @@
   "devDependencies": {
     "modern-css-reset": "^1.4.0",
     "prettier": "^3.0.3",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
   },
   "dependencies": {
     "@fontsource/fraunces": "^5.0.18",
-    "@fontsource/montserrat": "^5.0.16",
-    "postcss": "^8.4.33"
+    "@fontsource/montserrat": "^5.0.16"
   }
+
 }
