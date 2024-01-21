@@ -1,2 +1,2 @@
-import './modern-css-reset'
-import './style.css'
+import './modern-css-reset';
+import './style.css';
